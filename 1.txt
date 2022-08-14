@@ -5,3 +5,5 @@ added line 2
 added line 3
 
 added line 4 before stashing
+
+added line 5 after push from local repo
