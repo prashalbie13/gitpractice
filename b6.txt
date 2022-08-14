@@ -1,0 +1,5 @@
+fetch
+pull
+add file 
+merge
+push
