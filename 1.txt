@@ -12,3 +12,6 @@ added line 5 after push from local repo
 ####################################
 
 added from branch b1
+
+
+added to test merge command
