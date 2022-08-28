@@ -13,7 +13,7 @@ pipeline {
 			   
                        steps {    
 			       echo 'Before env variable'
-			       echo "$env.BRANCH_HOME"                         
+			       echo "$BRANCH_HOME"                         
 			       echo 'Building the file'
 	       }
 		   }
