@@ -2,7 +2,8 @@ pipeline {
        agent any
             stages {
                    stage("git") {
-                       steps {                          
+                       steps {  
+			       echo "$BRANCH_HOME" 
                             echo 'Downloaded jenkins file from github'
 	       }
 		   }
