@@ -10,6 +10,11 @@ pipeline {
 
 
                    stage("build") {
+			   when {
+				   expression {
+				   env.BRANCH_HOME == 'master'
+				   }   
+			   }
 			   
                        steps {    
 			       echo 'Before env variable'
