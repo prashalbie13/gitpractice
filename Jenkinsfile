@@ -12,7 +12,7 @@ pipeline {
                    stage("build") {
 			   
                        steps {    
-			       echo "$BRANCH_HOME"                         
+			       echo "BRANCH_HOME"                         
 			       echo 'Building the file'
 	       }
 		   }
