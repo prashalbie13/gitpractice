@@ -11,13 +11,6 @@ pipeline {
 
                    stage("build") {
 			   
-			   when {
-				   
-				   expression {
-				   env.BRANCH_HOME == 'master'
-				   }
-			   
-			   }
                        steps {    
 			       echo "$BRANCH_HOME"                         
 			       echo 'Building the file'
