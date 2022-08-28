@@ -13,14 +13,14 @@ pipeline {
 			   
                        steps {    
 			       echo 'Before env variable'
-			       echo "$BRANCH_HOME"                         
+			       echo "${env.BRANCH_HOME}"                        
 			       echo 'Building the file'
 	       }
 		   }
 
                    stage("deploy") {
                        steps {  
-			       echo "${BRANCH_HOME}" 
+			       echo "${env.BRANCH_HOME}" 
                             echo 'Deploying'
 	       }
 		   }
