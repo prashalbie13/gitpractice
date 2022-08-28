@@ -12,7 +12,8 @@ pipeline {
                    stage("build") {
 			   
                        steps {    
-			       echo "BRANCH_HOME"                         
+			       echo 'Before env variable'
+			       echo "$env.BRANCH_HOME"                         
 			       echo 'Building the file'
 	       }
 		   }
