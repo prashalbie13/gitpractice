@@ -27,3 +27,4 @@ pipeline {
 	echo 'inside always'
 	}
        }
+}
