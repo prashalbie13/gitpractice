@@ -3,7 +3,7 @@ pipeline {
             stages {
                    stage("git") {
                        steps {  
-			       echo "$BRANCH_HOME" 
+			       
                             echo 'Downloaded jenkins file from github'
 	       }
 		   }
@@ -25,7 +25,8 @@ pipeline {
 		   }
 
                    stage("deploy") {
-                       steps {                          
+                       steps {  
+			       echo "$BRANCH_HOME" 
                             echo 'Deploying'
 	       }
 		   }
