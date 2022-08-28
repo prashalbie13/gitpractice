@@ -10,7 +10,7 @@ pipeline {
 
                    stage("build") {
 			   when {
-				   echo "$BRANCH_HOME"
+				   echo '$BRANCH_HOME'
 				   expression {
 				   env.BRANCH_HOME == 'master'
 				   }
