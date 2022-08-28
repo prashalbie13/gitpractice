@@ -9,7 +9,8 @@ pipeline {
 
 
                    stage("build") {
-                       steps {                          
+                       steps {    
+			    sh './test.sh'
                             echo 'Building the file'
 	       }
 		   }
@@ -21,4 +22,8 @@ pipeline {
 		   }
 
 }
+	
+	always {
+	echo 'inside always'
+	}
        }
