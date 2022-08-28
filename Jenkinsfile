@@ -9,6 +9,12 @@ pipeline {
 
 
                    stage("build") {
+			   when {
+				   expression {
+				   BRANCH_HOME = 'master'
+				   }
+			   
+			   }
                        steps {    
 			    sh './test.sh'
                             echo 'Building the file'
