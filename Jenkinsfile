@@ -12,7 +12,7 @@ pipeline {
                    stage("build") {
 			   when {
 				   expression {
-				   env.BRANCH_HOME == 'master'
+				   env.BRANCH_HOME == 'origin/master'
 				   }   
 			   }
 			   
