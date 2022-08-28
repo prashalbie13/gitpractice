@@ -23,7 +23,7 @@ pipeline {
 
 }
 	post {
-	always {
+	failure {
 	echo 'inside always'
 	}
        }
