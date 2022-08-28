@@ -20,7 +20,7 @@ pipeline {
 
                    stage("deploy") {
                        steps {  
-			       echo "$BRANCH_HOME" 
+			       echo "${BRANCH_HOME}" 
                             echo 'Deploying'
 	       }
 		   }
