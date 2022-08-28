@@ -9,7 +9,7 @@ pipeline {
 
 
                    stage("build") {
-			   echo "$BRANCH_HOME"
+			   
 			   when {
 				   
 				   expression {
@@ -18,7 +18,8 @@ pipeline {
 			   
 			   }
                        steps {    
-			                                echo 'Building the file'
+			       echo "$BRANCH_HOME"                         
+			       echo 'Building the file'
 	       }
 		   }
 
