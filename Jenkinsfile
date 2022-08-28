@@ -11,7 +11,7 @@ pipeline {
                    stage("build") {
 			   when {
 				   expression {
-				   BRANCH_HOME = 'master'
+				   BRANCH_HOME == 'master'
 				   }
 			   
 			   }
