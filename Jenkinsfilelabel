@@ -1,15 +1,19 @@
+	
 pipeline {
-agent{
-label 'jenkinsec2'
-} 
-
-stages {
-stage('label') {
-steps{
-echo 'inside label'
-}
-}
-stage('Printing Parameters') {
+    agent any
+    parameters {
+        string(name: 'NAME', description: 'Please tell me your name?')
+ 
+        text(name: 'DESC', description: 'Describe about the job details')
+ 
+        booleanParam(name: 'SKIP_TEST', description: 'Want to skip running Test cases?')
+ 
+        choice(name: 'BRANCH', choices: ['Master', 'Dev'], description: 'Choose branch')
+ 
+        password(name: 'SONAR_SERVER_PWD', description: 'Enter SONAR password')
+    }
+    stages {
+        stage('Printing Parameters') {
             steps {
                 echo "Hello ${params.NAME}"
  
@@ -22,5 +26,5 @@ stage('Printing Parameters') {
                 echo "SONAR Password: ${params.SONAR_SERVER_PWD}"
             }
         }
-}
+    }
 }
