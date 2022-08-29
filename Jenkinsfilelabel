@@ -1,30 +1,29 @@
-	
 pipeline {
-    agent any
-    parameters {
-        string(name: 'NAME', description: 'Please tell me your name?')
- 
-        text(name: 'DESC', description: 'Describe about the job details')
- 
-        booleanParam(name: 'SKIP_TEST', description: 'Want to skip running Test cases?')
- 
-        choice(name: 'BRANCH', choices: ['Master', 'Dev'], description: 'Choose branch')
- 
-        password(name: 'SONAR_SERVER_PWD', description: 'Enter SONAR password')
-    }
-    stages {
-        stage('Printing Parameters') {
-            steps {
-                echo "Hello ${params.NAME}"
- 
-                echo "Job Details: ${params.DESC}"
- 
-                echo "Skip Running Test case ?: ${params.SKIP_TEST}"
- 
-                echo "Branch Choice: ${params.BRANCH}"
- 
-                echo "SONAR Password: ${params.SONAR_SERVER_PWD}"
-            }
-        }
-    }
+
+agent {
+	label('jenkinsec2')
+}
+parameters{
+string(name : 'NAME', description : 'please tell your name')
+text(name : 'Designation', description : 'your job role details')
+boolenParam(name : 'Skip', description : 'Do you want to skip tests?')
+choice(name: 'Branch', choices['Master', 'Dev'], description : "please choose branch" )
+}
+
+stages{
+stage('Printing parameters'){
+steps{
+echo "Your name ${params.NAME}"
+echo "Your job ${params.Designation}"
+echo "Skip test desicion ${params.Skip}"
+echo "Your branch ${params.Branch}"
+}
+
+}
+
+}
+
+
+
+
 }
