@@ -1,18 +1,12 @@
 pipeline {
-agent any 
+agent{
+label 'jenkinsec2'
+} 
+
 stages {
 stage("label") {
 steps{
-
-label 'jenkinsec2'}
-
+echo 'inside label'
 }
-
-
-
-
 }
-
-
-
 }
