@@ -1,8 +1,8 @@
 pipeline {
 agent any 
 stages {
-stage(label) {
-step{
+stage("label") {
+steps{
 
 label 'jenkinsec2'}
 
