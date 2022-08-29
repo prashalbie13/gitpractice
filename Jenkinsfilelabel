@@ -4,7 +4,7 @@ label 'jenkinsec2'
 } 
 
 stages {
-stage("label") {
+stage('label') {
 steps{
 echo 'inside label'
 }
