@@ -7,7 +7,7 @@ parameters{
 string(name : 'NAME', description : 'please tell your name')
 text(name : 'Designation', description : 'your job role details')
 booleanParam(name : 'Skip', description : 'Do you want to skip tests?')
-choice(name: 'Branch', choices['Master', 'Dev'], description : "please choose branch" )
+choice(name: 'Branch', choices: ['Master', 'Dev'], description : "please choose branch" )
 }
 
 stages{
