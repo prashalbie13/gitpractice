@@ -1,7 +1,7 @@
 pipeline {
 
 agent {
-	label('jenkinsec12')
+	label('jenkinsec2')
 }
 parameters{
 string(name : 'NAME', description : 'please tell your name')
